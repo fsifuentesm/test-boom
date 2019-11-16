@@ -55,7 +55,12 @@ ROOT_URLCONF = 'boom.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+                    # Website templates
+                    os.path.join(BASE_DIR, 'app/templates'),
+                    # PointSale templates
+                    os.path.join(BASE_DIR, 'PointSale/templates')
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,7 +72,6 @@ TEMPLATES = [
         },
     },
 ]
-
 WSGI_APPLICATION = 'boom.wsgi.application'
 
 
