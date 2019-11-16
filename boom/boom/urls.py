@@ -20,5 +20,5 @@ from telephone import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.form, name="form"),
+    path('locate_numbers', views.locate_numbers, name="locate_numbers"),
 ]
